@@ -1,6 +1,6 @@
 # Como efetuar carga de dados em tempo real?
 
-[![NPM](https://img.shields.io/npm/l/react)](https://github.com/pand-eX/DwNuvem/blob/main/LICENSE) 
+[![NPM](https://img.shields.io/npm/l/react)](https://github.com/pand-eX/LoadStreamingData/blob/main/LICENSE) 
 
 # Sobre o projeto
 
