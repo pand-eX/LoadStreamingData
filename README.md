@@ -40,18 +40,18 @@ Utilizarei o Firehose Stream para esse projeto! Porque eu vou coletar os streami
 
 -O serviço oferecido para AWS é tão incrível que eles além de permite que você crie o streaming ele permite que você usa dados de teste que eles mesmo estão gerando para você 
 
-![4]
+![4](https://github.com/pand-eX/LoadStreamingData/blob/main/assets/4.png)
 
 Nesse processo ele fala cria essa tabela depois você utiliza essa tabela para gravar o seu streaming e começe a capturar o streaming !!! eles fornecem dados de test incrível !!!
 
 Aqui está a configuração do meu Kinesis mas isso vária de acordo com suas necessidades deixarei apenas com exemplo !!! 
 
-![5]
+![5](https://github.com/pand-eX/LoadStreamingData/blob/main/assets/5.png)
 
 
 ## Carregando streaming de dados no Cluster Redshift
 
-![1]
+![1](https://github.com/pand-eX/LoadStreamingData/blob/main/assets/1.png)
 
 
 - Pegar os dados da fonte e ir para o delivery streaming vai fazer algum processo de transformação se eu tiver configurado  se não ele passa a diante (isso será o futuro, com o aumento de dados que está tendo no mundo o processo e transformação será em tempo real faz as analise armazena e segue para próxima) grava isso no s3 bucket utiliza o comando copy e grava no cluster Redshift /\ basicamente foi o que eu fiz no batch mas não tinha o streaming a AWS basicamente automatizou o processo para mim agora eu posso coletar os dados direto da fonte e colocar isso, armazenar direto no seu DW e você ainda pode criar o s3 Bucket backup porque como os dados são gerados em tempo Real o volume é muito grande normalmente você descarta esses dados depois de fazer algum tipo de operação mas caso você queria guardar você pode utilizar o s3 que o custo de armazenamento é muito menor 
@@ -60,11 +60,11 @@ Aqui está a configuração do meu Kinesis mas isso vária de acordo com suas ne
 - Esses dados são coletados da WEB através de um arquivo JSON ele é processado pelo Firehose gravado no s3 e então copiado para o Amazon Redshift e carregado na tabela tudo isso em Tempo real
  
 
-![2]
+![2](https://github.com/pand-eX/LoadStreamingData/blob/main/assets/2.png)
 
 
 
-![3]
+![3](https://github.com/pand-eX/LoadStreamingData/blob/main/assets/3.png)
 
 
 - Veja que ele gera alguns gráficos com bytes de entrada registro de entradas tem pouca coisa porque capturei por pouco tempo. 
