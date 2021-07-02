@@ -44,7 +44,8 @@ Utilizarei o Firehose Stream para esse projeto! Porque eu vou coletar os streami
 
 Nesse processo ele fala cria essa tabela depois você utiliza essa tabela para gravar o seu streaming e começe a capturar o streaming !!! eles fornecem dados de test incrível !!!
 
-Aqui está a configuração do meu Kinesis mas isso vária de acordo com suas necessidades deixarei apenas com exemplo !!! 
+Aqui está a configuração do meu Kinesis mas isso vária de acordo com suas necessidades deixarei apenas como exemplo !!! 
+
 
 ![5](https://github.com/pand-eX/LoadStreamingData/blob/main/assets/5.png)
 
