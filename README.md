@@ -1,30 +1,30 @@
-# Como efetuar carga de dados em tempo real?
+# How do I load data in real time?
 
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/pand-eX/LoadStreamingData/blob/main/LICENSE) 
 
-# Sobre o projeto
+# About the project
 
-Vou tomar como base que você viu o projeto Data Warehouse em Nuvem com Amazon Redshift, aqui irei explicar de forma rápida e direta de como efetuar uma carga de dados em tempo real(Streaming de dados) A AWS ofereçe alguns soluções que nós permite realizar esse tipo de tarefa.
+I will take as a basis that you saw the Project Data Warehouse in Cloud with Amazon Redshift, here I will explain quickly and directly how to perform a real-time data load (Streaming data) AWS offers some solutions that allow us to perform this type of task.
 
 
-Usarei o Amazon Kinesis Data Firehose ele permite consumir, armazenar em buffer e processar dados de streaming em tempo real, proporcionando insights em segundos ou minutos em vez de horas ou dias. Lembre-se de verificar os termo e precificação de qualquer produto AWS!
+I'll use Amazon Kinesis Data Firehose it allows to consume, buffer, and process streaming data in real time, providing insights in seconds or minutes instead of hours or days. Remember to check the terms and pricing of any AWS product!
 
 
 
 ## Why?
 
-por que trabalhar com Streaming(conjunto de dados gerados em tempo real) é sempre desafiador !!!
+why working with Streaming is always challenging to !!!
 
--Este projeto faz parte do meu portfólio pessoal, então, eu vou ficar feliz se você pudesse me fornecer qualquer feedback sobre o projeto, código, estrutura ou qualquer coisa que você possa relatar que poderia me fazer um engenheiro de dados melhor!
+-This project is part of my personal portfolio, so I'll be happy if you could provide me with any feedback on the project, code, structure or anything you can report that could make me a better data engineer!
 
 Email-me: henricao_7@yahoo.com.br
 
 Connect with me at [LinkedIn](https://www.linkedin.com/in/henrique-castro-484269203//).
 
 
-## Iniciando o projeto
+## Starting the project
 
-Existe 4 serviços que o Amazon Kinesis oferece 
+There are 4 services that Amazon Kinesis offers 
 
 -Data Stream
 
@@ -35,30 +35,29 @@ Existe 4 serviços que o Amazon Kinesis oferece
 -Video Stream
 
 
-Utilizarei o Firehose Stream para esse projeto! Porque eu vou coletar os streaming e vou entregar para o Amazon Redshift.
+I'll use Firehose Stream for this project! Because I'm going to collect the streaming and I'm going to deliver them to Amazon Redshift.
 
 
--O serviço oferecido para AWS é tão incrível que eles além de permite que você crie o streaming ele permite que você usa dados de teste que eles mesmo estão gerando para você 
+-The service offered to AWS is so amazing that they in addition to allowing you to create streaming it allows you to use test data that they themselves are generating for you
 
 ![4](https://github.com/pand-eX/LoadStreamingData/blob/main/assets/4.png)
 
-Nesse processo ele fala cria essa tabela depois você utiliza essa tabela para gravar o seu streaming e começe a capturar o streaming !!! eles fornecem dados de test incrível !!!
+In this process he speaks creates this table after you use this table to record your streaming and start capturing streaming !!! they provide amazing test data !!!
 
-Aqui está a configuração do meu Kinesis mas isso vária de acordo com suas necessidades deixarei apenas como exemplo !!! 
-
+Here is the configuration of my Kinesis but this various according to your needs I will leave only as an example !!!
 
 ![5](https://github.com/pand-eX/LoadStreamingData/blob/main/assets/5.png)
 
 
-## Carregando streaming de dados no Cluster Redshift
+## Loading data streaming into the Redshift Cluster
 
 ![1](https://github.com/pand-eX/LoadStreamingData/blob/main/assets/1.png)
 
 
-- Pegar os dados da fonte e ir para o delivery streaming vai fazer algum processo de transformação se eu tiver configurado  se não ele passa a diante (isso será o futuro, com o aumento de dados que está tendo no mundo o processo e transformação será em tempo real faz as analise armazena e segue para próxima) grava isso no s3 bucket utiliza o comando copy e grava no cluster Redshift /\ basicamente foi o que eu fiz no batch mas não tinha o streaming a AWS basicamente automatizou o processo para mim agora eu posso coletar os dados direto da fonte e colocar isso, armazenar direto no seu DW e você ainda pode criar o s3 Bucket backup porque como os dados são gerados em tempo Real o volume é muito grande normalmente você descarta esses dados depois de fazer algum tipo de operação mas caso você queria guardar você pode utilizar o s3 que o custo de armazenamento é muito menor 
+- Take the data from the source and go to the streaming delivery will do some transformation process if I have configured if not it goes on (this will be the future, with the increase of data that is having in the world the process and transformation will be in real time does the analysis stores and proceeds to next) writes this in the s3 bucket uses the copy command and writes to the redshift cluster /\ basically was what I did in the batch but had not the streaming AWS basically automated the process for me now I can collect the data direct from the source and put this, store direct in your DW and you can still create the s3 Bucket backup because as the data is generated in Real time the volume is very large you usually discard this data after doing some kind of operation but in case you wanted to save you can use s3 that storage cost is much lower 
 
 
-- Esses dados são coletados da WEB através de um arquivo JSON ele é processado pelo Firehose gravado no s3 e então copiado para o Amazon Redshift e carregado na tabela tudo isso em Tempo real
+- This data is collected from the WEB through a JSON file it is processed by firehose written in s3 and then copied to Amazon Redshift and loaded into the table all in real time
  
 
 ![2](https://github.com/pand-eX/LoadStreamingData/blob/main/assets/2.png)
@@ -68,8 +67,7 @@ Aqui está a configuração do meu Kinesis mas isso vária de acordo com suas ne
 ![3](https://github.com/pand-eX/LoadStreamingData/blob/main/assets/3.png)
 
 
-- Veja que ele gera alguns gráficos com bytes de entrada registro de entradas tem pouca coisa porque capturei por pouco tempo. 
+- See that it generates some graphics with input bytes has little thing because I captured it for a short time. 
 
 
-- Esse foi um exemplo de como nós podemos capturar dados em tempo real e armazenar diretamente no Redshift isso pode ser dado de sensores dados da internet das coisas IOT dados gerados a partir de dados WEB dados através de clicks website de site de venda e o kinesis faz isso tudo para você.
-
+- This was an example of how we can capture data in real time and store directly in Redshift this can be given from sensors data from the internet of things IOT data generated from data web data through website clicks of selling website and the kinesis does it all for you.
