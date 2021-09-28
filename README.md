@@ -68,4 +68,4 @@ Aqui está a configuração do meu Kinesis mas este vários de acordo com suas n
 - Veja que ele gera alguns gráficos com bytes de entrada tem pouca coisa porque eu capturei por um curto período de tempo. 
 
 
-- Este foi um exemplo de como podemos capturar dados em tempo real e armazenar diretamente no Redshift isso pode ser dado a partir de dados de sensores da internet de coisas que dados IOT gerados a partir de dados da Web através de cliques do site de venda do site e a cinese faz tudo por você.
+- Este foi um exemplo de como podemos capturar dados em tempo real e armazenar diretamente no Redshift isso pode ser dado a partir de sensores da internet de coisas, IOT gerados a partir de dados da Web através de cliques do site de venda do site e a Kinesis faz tudo por você.
