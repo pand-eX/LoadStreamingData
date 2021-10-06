@@ -24,13 +24,13 @@ Connect with me at [LinkedIn](https://www.linkedin.com/in/henrique-castro-484269
 
 Existem 4 serviços que a Amazon Kinesis oferece 
 
--Fluxo de dados
+-Kinesis Video Streams
 
--Fluxo de mangueira de fogo de dados
+-Kinesis Data Streams
 
--Análise de dados
+-Kinesis Data Firehose
 
--Fluxo de vídeo
+-Kinesis Data Analytics
 
 
 Vou usar o Firehose Stream para este projeto! Porque eu vou pegar o streaming e vou entregá-los para a Amazon Redshift.
