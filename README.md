@@ -23,6 +23,7 @@ Connect with me at [LinkedIn](https://www.linkedin.com/in/henrique-castro-484269
 
 ![17](https://github.com/pand-eX/LoadStreamingData/blob/main/assets/17.png)
 
+Eu vou utilizar o mesmo ambiente que criei no projeto passado com Redshift irei apenas adicionar o Kinesis na arquitetura !!!
 
 ## Iniciando o projeto
 
