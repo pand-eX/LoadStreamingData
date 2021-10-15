@@ -19,6 +19,10 @@ Email-me: henricao_7@yahoo.com.br
 
 Connect with me at [LinkedIn](https://www.linkedin.com/in/henrique-castro-484269203//).
 
+## Arquitetura do Projeto
+
+![17](https://github.com/pand-eX/LoadStreamingData/blob/main/assets/17.png)
+
 
 ## Iniciando o projeto
 
